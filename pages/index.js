@@ -4,7 +4,7 @@ import Feed from "../components/Feed";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="bg-gray-500 h-screen overflow-y-scroll scrollbar-hide">
       <Head>
         <title>Insta2Tech</title>
         <link rel="icon" href="/favicon.ico" />
