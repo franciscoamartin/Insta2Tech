@@ -1,4 +1,4 @@
-import faker from "faker";
+import { faker } from "@faker-js/faker";
 import { useEffect } from "react";
 import Story from "./Story";
 import { useState } from "react";
@@ -8,10 +8,10 @@ function Stories() {
 
   useEffect(() => {
     const suggestions = [...Array(20)].map((_, i) => ({
-      ...faker.helpers.contextualCard(),
+      ...faker,
       id: i,
     }));
-    
+
     setSuggestions(suggestions);
   }, []);
 
@@ -20,8 +20,8 @@ function Stories() {
       {suggestions.map((profile) => (
         <Story
           key={profile.id}
-          img={profile.avatar}
-          username={profile.username}
+          img={profile.image.avatar()}
+          username={profile.internet.userName()}
         />
       ))}
       {/* Story */}
